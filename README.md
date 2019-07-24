@@ -48,6 +48,15 @@ Top Income Counties 2017
 
 This is a very initial sketch of comparing the top 10 income counties against the average income. It also contains obesity rates and environmental food index rates against the average. Clearly the scales of this chart do not work. I am thinking maybe have a different chart for all 3 and include the top 25. I also like the idea of doing this for the bottom 25.
 
+Looking at Top and Bottom Income USA Counties
+
+<div class="infogram-embed" data-id="67881604-81d1-4dc2-81dc-4224b1819382" data-type="interactive" data-title="Untitled infographic"></div><script>!function(e,t,s,i){var n="InfogramEmbeds",o=e.getElementsByTagName("script")[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(i)&&(i=d+i),window[n]&&window[n].initialized)window[n].process&&window[n].process();else if(!e.getElementById(s)){var r=e.createElement("script");r.async=1,r.id=s,r.src=i,o.parentNode.insertBefore(r,o)}}(document,0,"infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/67881604-81d1-4dc2-81dc-4224b1819382" style="color:#989898!important;text-decoration:none!important;" target="_blank">Untitled infographic</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+
+
+I like these scatter plot a bit better. Still need to refine it a bit though. You can clearly see that there is a distinction in obesity rates and environmental food indices between the high and low income groups. As expected, the average falls pretty much in the middle on both charts. In the next version of the sketches, I want to look into doing a similar chart for PA counties.
+
+
+
 ## The Data
 
 I found county level data for adult obesity and enviormental food index for the years 2014 - 2018 on Data USA. The Data USA website actually has a cool feature where it will merge the datasets together, so I actually only had to download one excel file. 
@@ -56,7 +65,7 @@ Source of original data from: "Data USA." https://datausa.io/
 
 I then needed to find county level income data. I found this on the U.S. Bureau of Economic Analysis website. 
 
-Source of original data from:  "Personal Income." U.S. Bureau of Economic Analysis, May 2019.https://www.bea.gov/
+Source of original data from:  "Personal Income." U.S. Bureau of Economic Analysis, May 2019. https://www.bea.gov/
 
 Next, I needed to merge the two datasets. I did this by editing the income data to have the same format of county, state. Then, I used a vlookup to add the income columns to the obesity and food index data. The match was not perfect though. In these cases, the data was left blank since this number for each of the columns is small compared to the overall number of counties (over 3,140). Since the Data USA data contained extra years, I deleted 2014 and 2018 since they are not needed in the analytics. I defined FIPS code which is used in the map visualization tool for data wrapper. This was defined using the right 5 digits ID Geography from Data USA.
 
