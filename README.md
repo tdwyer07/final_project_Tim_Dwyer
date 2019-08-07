@@ -1,4 +1,4 @@
-# final_project_Tim_Dwyer - The correlation between Low Income and Unhealthy Diets
+# final_project_Tim_Dwyer - The correlation between Low Income and Food Insecurity
 This is for my final project in telling stories with data.
 
 ## Outline of Final Project
