@@ -4,33 +4,34 @@ This is for my final project in telling stories with data.
 ## Outline of Final Project
 
 ### Summary
-For my final project, I am telling a story on how areas with lower income have higher obesity rates and lower food environment indices. Food Environment Indices measures people's access to healthy foods through measuring low income and how close people are to a grocery store. My wife and I have made it a mission to start eating more balanced meals this summer. When our grocery store spending nearly doubled, we realized that eating healthy is very expensive. Therefore, I wanted to research if low income areas struggle more with obesity and finding healthy foods.
+For my final project, I am telling a story on how areas with lower income have higher food insecurity rates. I plan on starting with the full USA view and then drilling down to Pennsylvania since the target audience is residents in Pennsylvania. I hope talking about the areas near where people currently live helps make them connect to the story and the call to action.
 
 ### Outline of Major Elements
 
 User Story:
-As a reader, I want people living in the United States to understand the health challenges for low income areas so that I can work to improve their ability to make healthy choices through food.
+As a reader, I want people living in the United States, specifically Pennsylvania, to understand the health challenges for low income areas so that people can work to improve the situation for those people.
 
 Call to action:
 I can do this by donating to charities already working to help children in these areas, and challenging government representatives to start making changes.
 
-0. I am considering starting the story with a chart showing how the United States is one of the most wealthy countries in the world. This would start my audience on a positive note before jumping into the more sad parts of the story.
-1. Start with maps of the USA for each data elements. This will help show the background and lay the foundation. This section should pull the audience to a more negative place.
-    A.income map of the United States (Dark green as Highest to Light green as lower)
-    B. Show an obesity map of the United States (Dark blue as lowest?? to light blue as highest?? - does this make sense to have dark be good for all of the maps?)
-    C. Show an environmental food index map of the United States (Dark orange as highest to light orange as lowest)
-2. Dig in further at a more detailed grain by looking at the top and bottom county's by income in 2015 and see if the other metrics align. See if the trends are improving or not inn 2016 and 2017. This will further pull the story to a more sad place as they see the connection and the need for change
-3. Do a similar analysis to number 2 for PA since it is where CMU is. This is probably optional, but would connect more to the class as an audience.
-4. Call to action - Donate to charities that are providing lunches to children in low income areas and talk to your government about making changes about healthier options. This should create a positive ending by giving the audience power to start making a difference.
+1. Start with some high level statistics on how many people/children are hungry in USA. This is a hook showing and should pull people in by the surprise at the significance of the numbers.
+2. Show a visualization explaining how the United States is one of the most wealthy countries in the world. This would start my audience on a positive note before jumping into the more sad parts of the story.
+3. Show a few maps of the USA . This will help show the background and lay the foundation and start to connect the idea of income and food insecurity. This section should pull the audience to a more negative place.
+    A.income map of the United States
+    B. Show an environmental food index map of the United States 
+4. Drill down to show maps of Pennsylvania to connect more personally with my audience. This should keep the audience in a negative place.
+    A. income map of Pennsylvania
+    B. Overall food insecurity map of Pennsylvania
+    C. Childhood food insecurity map of Pennsylvania
+5. Top 10 and Bottom 10 Pennsylvania county by Income against Child Food Insecurity Rate
+Create a chart showing the top income counties and bottom income counties in Pennsylvania compared to childhood food insecurity rates to see if there is a distinct difference in the groups. This should show the bottom line that low income areas clearly have higher childhood insecurity rates. This should be very negative for the audience and the low point of the presentation pushing them to want to donate to support the areas through the charities in the call to action.
+6. Call to action - Donate to charities that are providing food to children and adults in low income areas. This should create a positive ending by giving the audience power to start making a difference.
 
 
 ## Initial Sketches
 
-We've explored how sketching can be a great way to help solidify your ideas into design choices, and for your proposal you'll be creating sketches that outline your initial thoughts for your final project.  You may choose to present your sketches and integrate them into Part I of your final project in whatever fashion you feel makes the most sense - but they should be clear enough to be understandable to someone that has little to no contextual background for your project.  Your sketches should mimic aspects of your outline, and build on the resounding message you want to make clear through your project.  Build in elements of your anticipated story structure for your project.  Your sketches themselves do not have to be visually correct / accurate and you may use whatever method makes the most sense to you (hand-drawn, digital, etc.). 
+Below are some of my initial thoughts for the project.
 
-Map of 2015 Obesity Rates
-
-<iframe title="2015 Obesity Rates" aria-label="USA counties (2014) choropleth map" id="datawrapper-chart-wLd7a" src="//datawrapper.dwcdn.net/wLd7a/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
 
 Map of 2015 Environmental Food Index
 
@@ -59,17 +60,27 @@ I like these scatter plot a bit better. Still need to refine it a bit though. Yo
 
 ## The Data
 
-I found county level data for adult obesity and enviormental food index for the years 2014 - 2018 on Data USA. The Data USA website actually has a cool feature where it will merge the datasets together, so I actually only had to download one excel file. 
+I found county level data for adult obesity and enviormental food index for the years 2014 - 2018 on Data USA. The Data USA website actually has a cool feature where it will merge the datasets together, so I actually only had to download one excel file. This data was leveraged in the USA food environmental index graph.
 
 Source of original data from: "Data USA." https://datausa.io/
 
-I then needed to find county level income data. I found this on the U.S. Bureau of Economic Analysis website. 
+I then needed to find county level income data. I found this on the U.S. Bureau of Economic Analysis website. This data was used in the Pennsylvania and USA income graph.
 
 Source of original data from:  "Personal Income." U.S. Bureau of Economic Analysis, May 2019. https://www.bea.gov/
 
-Next, I needed to merge the two datasets. I did this by editing the income data to have the same format of county, state. Then, I used a vlookup to add the income columns to the obesity and food index data. The match was not perfect though. In these cases, the data was left blank since this number for each of the columns is small compared to the overall number of counties (over 3,140). Since the Data USA data contained extra years, I deleted 2014 and 2018 since they are not needed in the analytics. I defined FIPS code which is used in the map visualization tool for data wrapper. This was defined using the right 5 digits ID Geography from Data USA.
+I pulled the data for the introduction on overall hunger in the United States from Feeding America. I also found childhood and overall food insecurity rates for Pennsylvania on one of their sites. I leveraged this data when building some of the Pennsylvania graphs.
 
-I plan on using this combined data to see if there is a relationship between income, obesity, and environmental food index through data visualizations. I will do this by comparing the income from 2015 to the environmental food index and obesity from 2015 to see if more wealthy areas have lower obesity rates and higher food indices, and if they opposite is true for low income areas. I will leverage the data to do the analysis for 2016 and 2017 to see what if they wshow simlar results.
+Sourced of original data from: "Feeding America." Feeding America, 2019. https://www.feedingamerica.org/
+
+Sourced of original data from: "Feeding America." Feeding America, 2019. https://public.tableau.com/profile/feeding.america.research#!/vizhome/2017StateWorkbook-Public_15568266651950/CountyDetailDataPublic
+
+I used the OECD data to get data for comparing average incomes at a country level. This helped me show that USA is one of the wealthier countries in the world
+
+Source of Data: “Average Wages.” OECD Data, 2019. https://data.oecd.org/earnwage/average-wages.htm 
+
+Next, I needed to merge the income and environmental food index data (and obesity data when it was part of the story). I did this by editing the income data to have the same format of county, state. Then, I used a vlookup to add the income columns to the obesity and food index data. The match was not perfect though. In these cases, the data was left blank since this number for each of the columns is small compared to the overall number of counties (over 3,140). Since the Data USA data contained extra years, I deleted 2014 and 2018 since they are not needed in the analytics. I defined FIPS code which is used in the map visualization tool for data wrapper. This was defined using the right 5 digits ID Geography from Data USA.
+
+I plan on using this combined data to see if there is a relationship between income and environmental food index through data visualizations. I will do this by comparing the income from 2017 to the environmental food index and obesity from 2017 to see if more wealthy areas have lower food insecurity rates, and if they opposite is true for low income areas. As discussed in the outline, I then want to look more closely at Pennsylvania.
 
 
 ## Method and medium
